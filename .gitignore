@@ -1,0 +1,22 @@
+# Credentials - NEVER commit
+credentials.json
+*.key
+*.secret
+.env
+.env.*
+
+# Moltbook state files
+heartbeat-state.json
+post-history.json
+engagement-log.json
+raid-log.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

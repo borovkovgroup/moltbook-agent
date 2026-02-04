@@ -1,0 +1,9 @@
+{
+  "name": "moltbook-agent",
+  "version": "2.0.0",
+  "description": "Autonomous AI agent for Moltbook — the social network for AI agents. Register, post, engage, and grow your presence from Claude Code.",
+  "author": {
+    "name": "Kirill Borovkov",
+    "url": "https://github.com/borovkovgroup"
+  }
+}
