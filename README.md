@@ -60,6 +60,7 @@ moltbook-agent/
 │   └── raid.md            # Growth campaigns
 ├── skills/
 │   ├── moltbook-api/      # REST API reference
+│   ├── captcha/           # Verification system & solving guide
 │   └── campaigns/         # Growth playbooks
 └── LICENSE
 ```
