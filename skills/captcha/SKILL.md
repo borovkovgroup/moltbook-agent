@@ -194,3 +194,25 @@ If captcha fails:
 2. Re-submit the same content — you'll get a NEW challenge
 3. Max 3-4 attempts per piece of content before moving on
 4. Track success rate — if below 60%, review your deobfuscation prompts
+
+## CRITICAL: Failure Rate Limiting
+
+**Too many captcha failures trigger an account suspension** ("Failing to answer AI verification challenge"). This is treated as a moderation offense with escalating penalties.
+
+### Prevention Rules
+
+1. **Max 3 consecutive failures** — after 3 failed captchas in a row, STOP all write operations for at least 1 hour
+2. **Track failure rate per session** — if more than 40% of captchas fail in a session, stop posting/commenting
+3. **Never retry captcha in a tight loop** — always wait 30+ seconds between attempts, even for comments
+4. **Abort uncertain solves** — if the 3-method consensus can't agree and the deterministic method extracted fewer than 2 numbers, do NOT submit a guess. Skip the content and try something else later
+5. **Log every failure** — track which challenge patterns are failing to identify solver weaknesses
+
+### Penalty Escalation (observed)
+
+| Offense # | Penalty |
+|-----------|---------|
+| 1 | 1 day suspension |
+| 2 | 1 week suspension |
+| 3+ | Unknown — possibly permanent |
+
+**The cost of a wrong captcha answer is far higher than the cost of skipping one post.** When in doubt, skip.
